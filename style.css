@@ -1,0 +1,227 @@
+* {
+    font-family: 'Rubik Doodle Shadow', serif;
+    font-weight: bold;
+}
+
+html {
+    background: linear-gradient(to left bottom, #5885b3, #c97092);
+    font-size: 30px;
+}
+
+body {
+    /*  */
+
+}
+
+.main-container {
+    border-radius: 3vw;
+    max-width: 25%;
+    height: 65vh;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 3%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.19) -10px 5px 20px, rgba(0, 0, 0, 0.23) -10px 5px 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header h2 {
+    margin-top: 10px;
+}
+
+.form-area {
+    font-size: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    width: 35%;
+    height: 25px;
+    background: none;
+    box-shadow: rgba(0, 0, 0, 0.19) -10px 5px 20px, rgba(0, 0, 0, 0.23) -10px 5px 6px;
+
+}
+.form-email,
+.form-password {
+    position:relative;
+    width: auto;
+    height: auto;
+    /* box-sizing: content-box; */
+    margin: 20px 0px 30px 0px; 
+    padding: 10px 0px;
+}
+
+input[type="email"],
+input[type="password"]{
+    position: absolute;
+}
+.user_labels{
+    cursor:text;
+    top : 10px;
+    position:absolute;
+    transition: 0.2s ease;
+
+
+}
+input[type="email"]:focus~ .user_labels,
+input[type="password"]:focus~.user_labels, input[type="email"]:valid~ .user_labels,
+input[type="password"]:valid~.user_labels, input[type="email"]:user-invalid~ .user_labels,
+input[type="password"]:user-invalid~.user_labels{
+transform: translateY(-17px);
+}
+.password-reset {
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+}
+
+input[type="email"],
+input[type="password"] {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+
+input:user-invalid {
+    border-bottom: 2px solid;
+    border-color: #DB4437;
+}
+.inputs_required{
+    bottom:5px;
+}
+input~.inputs_required {
+    position:absolute;
+    color: red;
+    display: none;
+}
+
+input:user-invalid~.inputs_required {
+    display: inline;
+}
+
+hr {
+    margin-top: 1.5rem;
+    width: 90%;
+    height: 1px;
+    border: none;
+    background-color: rgba(117, 117, 117, 1);
+    
+
+}
+
+.checkboxButton {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    
+}
+
+#remember-me {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    box-shadow: rgba(0, 0, 0, 0.19) -5px 3px 2px, rgba(0, 0, 0, 0.23) -5px 3px 6px;
+
+    
+}
+
+#remember-me::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em purple;
+}
+
+#remember-me:checked::before {
+    transform: scale(1);
+}
+
+footer {
+    display: flex;
+    padding: 0.60rem 10%;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 2px;
+    font-size: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.19) -10px 5px 20px, rgba(0, 0, 0, 0.23) -10px 5px 6px;
+}
+
+.social-media:nth-child(1) {
+    color: #DB4437;
+    border: 2px solid #DB4437;
+}
+
+.social-media:nth-child(2) {
+    color: #374999;
+    border: 2px solid #374999;
+}
+
+.social-media:nth-child(3) {
+    color: #0077B5;
+    border: 2px solid #0077B5;
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 25px;
+    }
+
+    .main-container {
+        max-width: 50vw;
+    }
+
+    footer {
+        margin-top: 1.5rem ;
+        padding: 0.60rem 20%;
+    }
+    .social-media{
+        width: 35px;
+    height: 35px;
+    }
+}
+@media only screen and (max-height: 1400px){
+    footer {
+        margin-top: 0px ;
+        padding: 0.60rem 20%;
+    }
+    .social-media{
+    width: 35px;
+    height: 35px;
+    }
+
+    hr {
+        margin-top: 0.5rem;   
+    }
+
+    .form-email,
+    .form-password {
+    margin: 10px 0px 20px 0px; 
+    padding: 10px 0px;
+}
+}
